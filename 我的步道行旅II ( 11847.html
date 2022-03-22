@@ -1,0 +1,766 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>我的步道行旅II (2019.01-2022.03)</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+}
+
+.simple-table-header {
+	background: rgb(247, 246, 243);
+	color: black;
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-opaquegray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="178180d1-d1a9-475a-9d0d-84377837cfbe" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/woodcuts_14.jpg" style="object-position:center 60%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🗺️</span></div><h1 class="page-title">我的步道行旅II (2019.01-2022.03)</h1></header><div class="page-body"><hr id="99c2fed6-eed9-440f-bf1c-c2ef1c081208"/><h2 id="cf5a72b6-b625-4d1f-b290-ca21721b95b1" class="">2019.01-12</h2><p id="65ac8b7c-140f-4763-a054-0109eb2d41b9" class="">
+</p><div id="836bac12-f6e3-436d-9572-d8faafcbbc58" class="column-list"><div id="185316c2-055e-41f5-8ff4-0412772457bf" style="width:50%" class="column"><figure id="11847900-428f-4817-9f2c-6d8177db3799" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1549465183983.jpg"><img style="width:2730px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1549465183983.jpg"/></a><figcaption>20190105頭城老街</figcaption></figure><figure id="552cd297-f314-4dc4-8b31-4e59711a6260" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1549465482919.jpg"><img style="width:2730px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1549465482919.jpg"/></a><figcaption>20190123頭城文學巷</figcaption></figure><figure id="0f741a38-5885-44fd-b58a-26cd7219b9a8" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1551705486018.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1551705486018.jpg"/></a><figcaption>20190228三貂嶺宜蘭大溪外澳</figcaption></figure><figure id="fc5b781e-3933-4d59-96c9-a2f731c46635" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1558594007214.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1558594007214.jpg"/></a><figcaption>20190505四腳亭~暖暖水庫</figcaption></figure><figure id="0c464312-9b8b-4d84-9afd-d1d5086febde" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563518782358.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563518782358.jpg"/></a><figcaption>20190716檜山巨木群&amp;蜜月小徑</figcaption></figure><figure id="28417150-757d-462e-a6a6-78b9c45fe4c0" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563518884335.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563518884335.jpg"/></a><figcaption>20190716檜山巨木群</figcaption></figure><figure id="df59ef95-1164-4fd7-b18f-69b9f09ad96f" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563519298739.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563519298739.jpg"/></a><figcaption>20190717野馬瞰山</figcaption></figure><figure id="e73116b9-7ced-4771-aede-9560fbc1bfe4" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1570980324256.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1570980324256.jpg"/></a><figcaption>20190805北投大屯國小</figcaption></figure><figure id="a6825060-b698-4a43-8c34-01f9358117c6" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_336124429425945.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_336124429425945.jpg"/></a><figcaption>20191107金瓜石報時山</figcaption></figure><figure id="f8645aaf-b7f6-4216-8d8e-322031e3741f" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_379790729709038.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_379790729709038.jpg"/></a><figcaption>20191117基隆山&amp;485峰&amp;基隆山東峰</figcaption></figure><figure id="532a8564-7359-42ed-889c-4ae6b5f55002" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_3171099238018.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_3171099238018.jpg"/></a><figcaption>20191223金瓜石102公路探查</figcaption></figure><p id="10d6a4e0-f139-4f3e-b7a4-81bc868a2ef2" class="">
+</p><p id="b578c2c8-4daf-429e-90a9-ed10fb952cd1" class="">
+</p><p id="ef07b129-edc6-49d6-9c84-32613a327d4a" class="">
+</p><p id="200a9241-218b-4742-90b6-4372e1962dfb" class="">
+</p><p id="60ab40c0-87df-442f-b976-1138e4a30751" class="">
+</p><p id="94a6a6c5-51ae-47f1-8e86-d682cc7c6a0a" class="">
+</p><p id="8ab2ce59-2a94-487a-8429-5049f6c78a8e" class="">
+</p><p id="13f6ff86-c394-4157-9276-b8d2b09f991e" class="">
+</p><p id="d349f6f8-0350-4e45-8598-54b9e7cf2d15" class="">
+</p><hr id="725e55c1-d5ad-4ea2-a149-ba6b4ed310ae"/><h2 id="f8dde713-b386-40e0-8c50-bbcfd0305a92" class="">2020.01-12</h2><p id="c962e9cd-a683-4c39-8200-faa82b1ec557" class="">
+</p><figure id="cdf7444b-dcb6-427c-b034-ba659c42b3b8" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_5919707652595.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_5919707652595.jpg"/></a><figcaption>20200103正濱漁港</figcaption></figure><figure id="aebac751-6308-49e8-bc06-67a5a2fb5b0a" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_6415866886729.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_6415866886729.jpg"/></a><figcaption>20200105百二崁步道</figcaption></figure><figure id="67397f2f-c845-4cfe-9861-252c57dd0c96" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_6357999399459.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_6357999399459.jpg"/></a><figcaption>20200105燦光寮山</figcaption></figure><figure id="1b397294-1d55-4ee0-b5d0-3ca2f79a069d" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_45562257953919.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_45562257953919.jpg"/></a><figcaption>20200201水湳洞</figcaption></figure><figure id="8e863e85-2729-460d-9675-efad61c3da75" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_46255635638707.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_46255635638707.jpg"/></a><figcaption>20200211遠望坑&amp;卯澳&amp;三貂角&amp;馬崗村&amp;暖暖苗圃</figcaption></figure><figure id="8ce7549c-01c3-4d71-8fc8-c44f965b271e" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_59035008790410.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_59035008790410.jpg"/></a><figcaption>20200306蝙蝠洞公園&amp;象鼻岩</figcaption></figure><figure id="7d1ad7e0-4728-4914-852a-62e56540bd59" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_88503765176577.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_88503765176577.jpg"/></a><figcaption>20200411龍洞岬灣步道&amp;暖暖花草</figcaption></figure><figure id="49932c10-7d05-4f8b-b379-e9ee512f6e86" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_15693826839604.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_15693826839604.jpg"/></a><figcaption>20200712-14桃園三坑老街</figcaption></figure><figure id="c3aae476-acaf-4f23-8daa-bb5a5462d003" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200916%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E6%A9%AB%E5%B6%BA%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"><img style="width:851px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200916%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E6%A9%AB%E5%B6%BA%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20200916大雪山林道-橫嶺山步道</figcaption></figure><figure id="a75cdf9f-3933-403d-97e7-1f12df6a59b5" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E7%A5%9E%E6%9C%A8.jpg"><img style="width:851px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E7%A5%9E%E6%9C%A8.jpg"/></a><figcaption>20200917大雪山林道-神木</figcaption></figure><figure id="3e673bcf-2ab2-442a-b019-91cf20f609db" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200918%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E7%A8%8D%E4%BE%86%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"><img style="width:851px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200918%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E7%A8%8D%E4%BE%86%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20200918大雪山林道-稍來山步道</figcaption></figure><figure id="e94667a3-01cc-4831-b3f7-8544dc2e21b5" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200926%E5%8D%97%E5%AD%90%E5%90%9D%E9%BE%8D%E6%B4%9E%E7%81%A3%E5%B2%AC%E5%8D%97%E9%9B%85%E5%A5%87%E5%B2%A9.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200926%E5%8D%97%E5%AD%90%E5%90%9D%E9%BE%8D%E6%B4%9E%E7%81%A3%E5%B2%AC%E5%8D%97%E9%9B%85%E5%A5%87%E5%B2%A9.jpg"/></a><figcaption>20200926南子吝&amp;龍洞灣岬&amp;南雅奇岩</figcaption></figure><figure id="033fdf9e-5448-455d-a02d-d172c23eebdb" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201026%E5%8D%97%E5%93%88%E5%93%88%E5%B1%B1%E7%9F%B3%E9%96%80%E5%B1%B1%E5%8C%97%E5%B3%B0.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201026%E5%8D%97%E5%93%88%E5%93%88%E5%B1%B1%E7%9F%B3%E9%96%80%E5%B1%B1%E5%8C%97%E5%B3%B0.jpg"/></a><figcaption>20201026南哈哈山&amp;石門山北峰</figcaption></figure><p id="b37496d5-5f45-4f0b-bd5b-ebccd5d31859" class="">
+</p><p id="0480946c-39f2-4d2e-a0ef-a6a4be5ca41c" class="">
+</p><p id="b3311011-68bd-46aa-bd64-e2c6f3aa529d" class="">
+</p><p id="a251e1ac-0c23-44f7-b6a9-c9c7957536ca" class="">
+</p><p id="8b454ba6-2621-4de6-bd5e-b11c2a4d8446" class="">
+</p><p id="32824220-d723-4e08-b032-a131b528ba94" class="">
+</p><p id="f2d40937-8afa-4536-99ab-d7fd3ef33f9a" class="">
+</p><p id="d16a60dd-84c8-4377-a44c-a58ce5941ca5" class="">
+</p><hr id="4045c018-db87-4637-bb58-708ad9747f00"/><h2 id="785a3a71-ad08-4b98-bd87-a0d624f98e61" class="">2021.01-12</h2><p id="84d3534f-bb95-4182-95cf-44e4da69065b" class="">
+</p><figure id="31af4419-7539-43bd-8d77-b65a31835286" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210102%E5%A4%A7%E6%BA%9D%E6%BA%AA%E5%9C%93%E8%A6%BA%E5%AF%BA%E7%99%BD%E7%9F%B3%E6%B9%96%E9%AF%89%E9%AD%9A%E5%B1%B1.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210102%E5%A4%A7%E6%BA%9D%E6%BA%AA%E5%9C%93%E8%A6%BA%E5%AF%BA%E7%99%BD%E7%9F%B3%E6%B9%96%E9%AF%89%E9%AD%9A%E5%B1%B1.jpg"/></a><figcaption>20210102大溝溪&amp;圓覺寺&amp;白石湖&amp;鯉魚山</figcaption></figure><figure id="3c819eb0-fc23-4d48-ba28-5a29efe01b97" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210113%E9%BC%BB%E9%A0%AD%E8%A7%92%E6%AD%A5%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210113%E9%BC%BB%E9%A0%AD%E8%A7%92%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210113鼻頭角步道</figcaption></figure><figure id="829d75bf-feff-48e5-a726-25035f8593e8" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210120%E6%B0%B4%E6%B9%B3%E6%B4%9E%E6%95%A3%E7%AD%96.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210120%E6%B0%B4%E6%B9%B3%E6%B4%9E%E6%95%A3%E7%AD%96.jpg"/></a><figcaption>20210120水湳洞散策</figcaption></figure><figure id="d41d5cc5-d0a5-4bf9-a1dd-ae6ae22a642c" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210130_%E9%BC%BB%E9%A0%AD%E8%A7%92%E7%A8%9C%E8%B0%B7%E6%AD%A5%E9%81%93%EF%BC%88%E6%96%87%E7%8E%B2%EF%BC%89.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210130_%E9%BC%BB%E9%A0%AD%E8%A7%92%E7%A8%9C%E8%B0%B7%E6%AD%A5%E9%81%93%EF%BC%88%E6%96%87%E7%8E%B2%EF%BC%89.jpg"/></a><figcaption>20210130 鼻頭角稜谷步道</figcaption></figure><figure id="ac94d5a3-e83d-431e-b87e-7f7d0eee2a90" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210215%E9%87%91%E5%AD%97%E7%A2%91%E5%8F%A4%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210215%E9%87%91%E5%AD%97%E7%A2%91%E5%8F%A4%E9%81%93.jpg"/></a><figcaption>20210215金字碑古道</figcaption></figure><figure id="66053cfd-0200-4425-bf76-e68d1cb65f41" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210215%E6%A8%B9%E6%A2%85%E5%9D%AA%E5%8F%A4%E9%81%93.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210215%E6%A8%B9%E6%A2%85%E5%9D%AA%E5%8F%A4%E9%81%93.jpg"/></a><figcaption>20210215樹梅坪古道</figcaption></figure><figure id="a1b0fed1-1ec4-4d91-be58-d53e009e37c1" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210327%E8%99%8E%E8%B1%B9%E6%BD%AD%E5%8F%A4%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210327%E8%99%8E%E8%B1%B9%E6%BD%AD%E5%8F%A4%E9%81%93.jpg"/></a><figcaption>20210327虎豹潭古道</figcaption></figure><figure id="50b12c7e-d80e-41be-8382-9e584b4383fa" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210406%E8%A6%8B%E6%99%B4%E6%87%B7%E5%8F%A4%E6%AD%A5%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210406%E8%A6%8B%E6%99%B4%E6%87%B7%E5%8F%A4%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210406見晴懷古步道</figcaption></figure><figure id="0007feb5-272c-4c3c-8913-1ddf4e7b5b50" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210407%E6%AA%9C%E6%9C%A8%E5%8E%9F%E5%A7%8B%E6%9E%97%E6%AD%A5%E9%81%93.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210407%E6%AA%9C%E6%9C%A8%E5%8E%9F%E5%A7%8B%E6%9E%97%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210407檜木原始林步道</figcaption></figure><figure id="325103c9-453d-41f7-8119-1aff40974b30" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210408%E5%88%A9%E6%BE%A4%E7%B0%A1%E4%B8%89%E5%A5%87%E7%BE%8E%E5%BE%91.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210408%E5%88%A9%E6%BE%A4%E7%B0%A1%E4%B8%89%E5%A5%87%E7%BE%8E%E5%BE%91.jpg"/></a><figcaption>20210408利澤簡&amp;三奇美徑</figcaption></figure><figure id="b1bc9d40-e4dd-4cff-b158-c474f7703277" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/2021041214%E5%A4%A7%E6%AD%A6%E5%B4%99%E6%BE%B3%E5%BA%95%E6%B2%99%E7%81%98%E6%B9%96%E6%B5%B7%E7%81%A3.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/2021041214%E5%A4%A7%E6%AD%A6%E5%B4%99%E6%BE%B3%E5%BA%95%E6%B2%99%E7%81%98%E6%B9%96%E6%B5%B7%E7%81%A3.jpg"/></a><figcaption>20210412&amp;14大武崙澳底沙灘&amp;湖海灣</figcaption></figure><figure id="76e45da6-5a45-42b1-a771-7c7722f90523" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210516%E7%8C%B4%E7%A1%90%E6%B8%85%E6%99%A8%E7%A5%9E%E7%A4%BE.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210516%E7%8C%B4%E7%A1%90%E6%B8%85%E6%99%A8%E7%A5%9E%E7%A4%BE.jpg"/></a><figcaption>20210516猴硐清晨&amp;神社</figcaption></figure><figure id="425b7334-296b-419c-92c4-bccc0fdb3359" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211003%E7%81%A3%E6%BD%AD%E5%8F%A4%E9%81%93-%E4%B8%89%E6%B0%B4%E6%BD%AD.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211003%E7%81%A3%E6%BD%AD%E5%8F%A4%E9%81%93-%E4%B8%89%E6%B0%B4%E6%BD%AD.jpg"/></a><figcaption>20211003灣潭古道-三水潭</figcaption></figure><figure id="7e6897ed-e227-4bd7-9604-7e0c507daa30" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211104%E8%BF%AA%E5%8C%96%E8%A1%97%E6%95%A3%E7%AD%96.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211104%E8%BF%AA%E5%8C%96%E8%A1%97%E6%95%A3%E7%AD%96.jpg"/></a><figcaption>20211104迪化街散策</figcaption></figure><figure id="af171ca4-6f84-4ec7-865a-f81721c9ce30" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211110%E5%9F%BA%E9%9A%86%E8%A6%81%E5%A1%9E%E5%8F%B8%E4%BB%A4%E5%AE%98%E9%82%B8.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211110%E5%9F%BA%E9%9A%86%E8%A6%81%E5%A1%9E%E5%8F%B8%E4%BB%A4%E5%AE%98%E9%82%B8.jpg"/></a><figcaption>20211110基隆要塞司令官邸</figcaption></figure><figure id="7beb9d89-dda5-4ceb-9531-42907233edd4" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211128%E5%A4%AA%E5%B9%B3%E9%9D%92%E9%B3%A5.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211128%E5%A4%AA%E5%B9%B3%E9%9D%92%E9%B3%A5.jpg"/></a><figcaption>20211128太平青鳥</figcaption></figure><figure id="bbb311d6-717b-477f-9ba6-0f726ef3583a" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211201%E5%90%88%E6%AD%A1%E5%8C%97%E5%B3%B0-1.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211201%E5%90%88%E6%AD%A1%E5%8C%97%E5%B3%B0-1.jpg"/></a><figcaption>20211201合歡北峰-1</figcaption></figure><p id="7b06e043-89d0-49eb-93fa-d104b357d257" class="">
+</p><p id="100193c7-1211-45c8-a788-674b0c1f44b7" class="">
+</p><p id="3a46aa52-e99c-4b0b-a6f1-48a3e56d2d3d" class="">
+</p><p id="93bbe2ae-759d-42e6-9166-4a66e0772bcb" class="">
+</p><p id="1f315a60-abfd-446b-a839-89b78425499a" class="">
+</p><p id="bfd2a9f6-e6a4-40c6-beb3-7dd92828dc67" class="">
+</p><p id="030fc8cc-7ad8-46a1-b478-a474afdde973" class="">
+</p><p id="6d5b0a7a-0e18-430d-ad1b-829d9dde9168" class="">
+</p><p id="b832ca27-549e-4a8e-a14c-3fc192dc336d" class="">
+</p><p id="8d9e0105-3df9-477e-acb9-7ea3684f06d2" class="">
+</p><hr id="fed01508-f177-4c29-8a63-1bb6dd235eb6"/><h2 id="d370f006-e19d-47b8-af6d-379724b96fa3" class="">2022.01-03</h2><p id="45f4f763-8032-4539-a14a-713b998faabd" class="">
+</p><figure id="45b45a24-be35-4c0d-ae8f-74f1c4b7c0fc" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220104-06%E6%A2%A8%E5%B1%B1%E7%A6%8F%E5%A3%BD%E5%B1%B1-1.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220104-06%E6%A2%A8%E5%B1%B1%E7%A6%8F%E5%A3%BD%E5%B1%B1-1.jpg"/></a><figcaption>20220104-06梨山&amp;福壽山-1</figcaption></figure><figure id="7feb88ba-580c-4e67-a6fa-e90ac3f61f38" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220104-06%E6%A2%A8%E5%B1%B1%E7%A6%8F%E5%A3%BD%E5%B1%B1-3.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220104-06%E6%A2%A8%E5%B1%B1%E7%A6%8F%E5%A3%BD%E5%B1%B1-3.jpg"/></a><figcaption>20220104-06梨山&amp;福壽山-3</figcaption></figure><figure id="f893f639-663a-4787-8459-995e951d9315" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220227%E6%88%B0%E4%BF%98%E7%87%9F%E7%A5%88%E5%A0%82%E8%80%81%E8%A1%97.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220227%E6%88%B0%E4%BF%98%E7%87%9F%E7%A5%88%E5%A0%82%E8%80%81%E8%A1%97.jpg"/></a><figcaption>20220227戰俘營&amp;祈堂老街</figcaption></figure><p id="7fc22780-66ca-4e40-8425-2015c8536dc2" class="">
+</p><p id="f85e8a0f-cc50-4b83-af99-b97321a3d9a2" class="">
+</p><p id="ab5e6e6e-92d5-419b-bc49-6f62bac6ffb2" class="">
+</p><p id="2b6e3eb9-340a-4f5d-b068-73ba22f57ac8" class="">
+</p></div><div id="5b5fb03c-508f-4952-a3ac-bc1390bd6ffb" style="width:50%" class="column"><figure id="6a457425-0d11-402e-95b6-55f220bfeadb" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1549465658360.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1549465658360.jpg"/></a><figcaption>20190206迪化街</figcaption></figure><figure id="7e72bba8-55c5-4e96-a14b-823bdc37a434" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1552748532750.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1552748532750.jpg"/></a><figcaption>20190316隆嶺古道</figcaption></figure><figure id="21d2d285-3bbb-4a4d-9a07-fb9865e3f7b4" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1558592788471.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1558592788471.jpg"/></a><figcaption>20190406隆嶺古道踏查</figcaption></figure><figure id="e286e3c1-43c0-43b9-8916-00d9b13fae0a" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563517800930.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563517800930.jpg"/></a><figcaption>20190715清泉部落&amp;雪霸&amp;觀霧</figcaption></figure><figure id="4ad452ff-ee06-4189-9d5b-49f81560e425" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563518811382.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563518811382.jpg"/></a><figcaption>20190716蜜月小徑</figcaption></figure><figure id="2ef97d77-b17a-49fe-8fae-702ece21acd9" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563519239461.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1563519239461.jpg"/></a><figcaption>20190717雲霧步道</figcaption></figure><figure id="13a3f8d7-6f24-44a0-8efc-63a2c7e0f84c" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1570980672709.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/1570980672709.jpg"/></a><figcaption>20191006暖暖清法戰爭遺址步道</figcaption></figure><figure id="43f9e02a-9f32-48db-a037-e3fce0d02de8" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_336384690187774.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_336384690187774.jpg"/></a><figcaption>20191109報時山&amp;茶壺山</figcaption></figure><figure id="0df153ee-eb1c-459f-9c6e-f23981a4a656" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_159996952596097.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_159996952596097.jpg"/></a><figcaption>20191214黃金神社&amp;無敵海景步道&amp;貂山古道</figcaption></figure><figure id="3f1e88b0-55d5-4db6-87f0-6527bd14a655" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_4010106944311.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_4010106944311.jpg"/></a><figcaption>20191227再遊報時山&amp;茶壺山</figcaption></figure><p id="2e8b0883-7d72-4540-b470-57392ff2077c" class="">
+</p><p id="b6ceed05-01bd-491a-92ce-70ce17202360" class="">
+</p><p id="e5366df0-08f2-46fa-a773-f2a94aed622e" class="">
+</p><p id="aec00a52-967a-4055-912c-e7662956bdbc" class="">
+</p><p id="5a040e89-d328-4997-8bdb-360ddfb3dae4" class="">
+</p><figure id="319ed1d3-2469-4016-a00b-28f092ebbc24" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_5443953252880.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_5443953252880.jpg"/></a><figcaption>20200104五堵台鐵舊隧道</figcaption></figure><figure id="fedf2cff-bcf7-4e28-820b-8b2814ba787f" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_6341000741445.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_6341000741445.jpg"/></a><figcaption>20200105半屏山</figcaption></figure><figure id="5e2ace6d-d68f-41d8-bb39-76d3e373bf66" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_44664319949210.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_44664319949210.jpg"/></a><figcaption>20200114南子吝步道&amp;水湳洞</figcaption></figure><figure id="134484b1-1741-4387-b960-e7c07d3ca9b2" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_46535428325371.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_46535428325371.jpg"/></a><figcaption>20200206十三層遺址&amp;濂洞國小</figcaption></figure><figure id="f21a720f-0953-4707-bc0e-b303cb086ce9" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_45967619205796.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_45967619205796.jpg"/></a><figcaption>20200210馬崗村&amp;三貂角&amp;大溪漁港</figcaption></figure><figure id="38a802e7-80d2-456e-a2d7-ca461a0827f6" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_2004743209180.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_2004743209180.jpg"/></a><figcaption>20200215南子吝&amp;水湳洞</figcaption></figure><figure id="0de792aa-5340-437a-ac22-a43b29db1aa3" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_2402126525435.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_2402126525435.jpg"/></a><figcaption>20200303南雅&amp;和美</figcaption></figure><figure id="58a8f830-7188-44d0-a4f9-28646a0a5041" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_59088315367837.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_59088315367837.jpg"/></a><figcaption>20200307大粗坑步道</figcaption></figure><figure id="6a76eaa8-f3e8-4a23-a8dd-f3080d3c4150" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_88351880924395.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_88351880924395.jpg"/></a><figcaption>20200418小粗坑古道&amp;金字碑古道牡丹段</figcaption></figure><figure id="37cc53be-e40d-4ce6-ae79-16b1b490430d" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_15639706186656.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_15639706186656.jpg"/></a><figcaption>20200712-14桃園忠貞三坑老街紅橋</figcaption></figure><figure id="9314f72f-a3a8-4b98-a9fc-6638dea92ba5" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_15608469432500.jpg"><img style="width:1108px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/line_15608469432500.jpg"/></a><figcaption>20200712-14桃園百吉步道</figcaption></figure><figure id="332651c9-8c70-4c99-a7bf-fbe169a69a12" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200916%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E6%A3%AE%E6%9E%97%E6%B5%B4%E6%AD%A5%E9%81%93(%E5%B0%8F%E7%A5%9E%E6%9C%A8).jpg"><img style="width:851px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200916%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E6%A3%AE%E6%9E%97%E6%B5%B4%E6%AD%A5%E9%81%93(%E5%B0%8F%E7%A5%9E%E6%9C%A8).jpg"/></a><figcaption>20200916大雪山林道-森林浴步道(小神木)</figcaption></figure><figure id="d9e746db-661d-4c0a-8e1a-da0fd813be08" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E5%95%9E%E5%8F%A3%E8%A7%80%E6%99%AF%E5%8F%B0.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E5%95%9E%E5%8F%A3%E8%A7%80%E6%99%AF%E5%8F%B0.jpg"/></a><figcaption>20200917大雪山林道-啞口觀景台</figcaption></figure><figure id="fb5c0421-640d-449d-81f3-970fda09ebae" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E5%A4%A9%E6%B1%A0.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E5%A4%A9%E6%B1%A0.jpg"/></a><figcaption>20200917大雪山林道-天池</figcaption></figure><figure id="83b1a204-9348-49af-86cb-5482c142cec0" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E6%9C%A8%E9%A6%AC%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200917%E5%A4%A7%E9%9B%AA%E5%B1%B1%E6%9E%97%E9%81%93-%E6%9C%A8%E9%A6%AC%E9%81%93.jpg"/></a><figcaption>20200917大雪山林道-木馬道</figcaption></figure><figure id="e922d8a7-a02d-4173-bb0b-da8489c1991d" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201003%E5%8C%97%E6%8A%95%E5%8D%81%E5%85%AB%E5%88%86%E7%AB%B9%E5%AD%90%E6%B9%96.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201003%E5%8C%97%E6%8A%95%E5%8D%81%E5%85%AB%E5%88%86%E7%AB%B9%E5%AD%90%E6%B9%96.jpg"/></a><figcaption>20201003北投十八分&amp;竹子湖</figcaption></figure><figure id="f61b47d2-b440-4dd9-ad45-5f2d0653fe3d" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201016%E9%87%8E%E6%9F%B3.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201016%E9%87%8E%E6%9F%B3.jpg"/></a><figcaption>20201016野柳</figcaption></figure><figure id="e187dc75-02f7-46d0-a3db-2faa6cadb4b7" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201027%E5%B0%8F%E5%A5%87%E8%90%8A%E6%AD%A5%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20201027%E5%B0%8F%E5%A5%87%E8%90%8A%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20201027小奇萊步道</figcaption></figure><p id="5bad7129-25e0-48ad-bdea-b9ef866377ef" class="">
+</p><p id="d2ec4769-2992-41c4-9e0c-2b686d2545cd" class="">
+</p><p id="80218a6a-0336-460b-b137-9833895bb393" class="">
+</p><p id="45c91c44-a408-42e3-a23d-c611d6806776" class="">
+</p><p id="1f275003-007a-401f-98f5-15540cb32eae" class="">
+</p><figure id="33b2cb85-e595-4428-8a39-dd8dfe4a9c96" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210109%E4%B8%89%E8%B2%82%E8%A7%92%E7%87%88%E5%A1%94%E9%A6%AC%E5%B4%97%E6%BC%81%E6%9D%91.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210109%E4%B8%89%E8%B2%82%E8%A7%92%E7%87%88%E5%A1%94%E9%A6%AC%E5%B4%97%E6%BC%81%E6%9D%91.jpg"/></a><figcaption>20210109三貂角燈塔&amp;馬崗漁村</figcaption></figure><figure id="5393920a-53d7-4073-9efb-fe19e9b91299" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210114%E5%85%AB%E6%96%97%E5%AD%90%E6%9C%9B%E5%B9%BD%E8%B0%B7.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210114%E5%85%AB%E6%96%97%E5%AD%90%E6%9C%9B%E5%B9%BD%E8%B0%B7.jpg"/></a><figcaption>20210114八斗子望幽谷</figcaption></figure><figure id="3f04c460-dd0a-4f63-89ba-8cf034ca9388" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210130%E8%8B%A7%E5%AD%90%E6%BD%AD%E5%8F%A4%E9%81%93%E7%90%89%E6%A6%94%E8%B7%AF%E6%AD%A5%E9%81%93.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210130%E8%8B%A7%E5%AD%90%E6%BD%AD%E5%8F%A4%E9%81%93%E7%90%89%E6%A6%94%E8%B7%AF%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210130苧子潭古道&amp;琉榔路步道</figcaption></figure><figure id="16eb8308-6004-45fb-87f5-a7b564f872e5" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210215%E7%89%A1%E4%B8%B9%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210215%E7%89%A1%E4%B8%B9%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210215牡丹山步道</figcaption></figure><figure id="f2927767-c815-487f-a257-e52f8aceb668" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210225%E9%87%91%E7%93%9C%E7%9F%B3%E7%A5%88%E5%A0%82%E8%80%81%E8%A1%97.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210225%E9%87%91%E7%93%9C%E7%9F%B3%E7%A5%88%E5%A0%82%E8%80%81%E8%A1%97.jpg"/></a><figcaption>20210225金瓜石祈堂老街</figcaption></figure><figure id="57882b38-fc19-4e92-87af-4b01e008a568" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210402%E5%A4%96%E6%9C%A8%E5%B1%B1%E6%83%85%E4%BA%BA%E6%B9%96.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210402%E5%A4%96%E6%9C%A8%E5%B1%B1%E6%83%85%E4%BA%BA%E6%B9%96.jpg"/></a><figcaption>20210402外木山&amp;情人湖</figcaption></figure><figure id="04c24410-508f-448b-bba5-d9e6f184c9c7" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210406%E8%8C%82%E8%88%88%E6%87%B7%E8%88%8A%E6%AD%A5%E9%81%93.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210406%E8%8C%82%E8%88%88%E6%87%B7%E8%88%8A%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210406茂興懷舊步道</figcaption></figure><figure id="630277d5-9077-4330-a266-2a09018a16ea" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210407%E7%BF%A0%E5%B3%B0%E6%B9%96%E7%92%B0%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210407%E7%BF%A0%E5%B3%B0%E6%B9%96%E7%92%B0%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20210407翠峰湖環山步道</figcaption></figure><figure id="134173e7-763f-474f-a17f-2638735c7070" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210408%E9%BE%8D%E6%BD%AD%E6%B9%96.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210408%E9%BE%8D%E6%BD%AD%E6%B9%96.jpg"/></a><figcaption>20210408龍潭湖</figcaption></figure><figure id="b4693294-7865-4728-8b0b-fb2fc3cce2da" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210423%E9%BC%BB%E9%A0%AD%E8%A7%92%E6%AD%A5%E9%81%93%E8%A5%BF%E5%8B%A2%E6%B0%B4%E5%BA%AB.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210423%E9%BC%BB%E9%A0%AD%E8%A7%92%E6%AD%A5%E9%81%93%E8%A5%BF%E5%8B%A2%E6%B0%B4%E5%BA%AB.jpg"/></a><figcaption>20210423鼻頭角步道&amp;西勢水庫</figcaption></figure><figure id="90d59977-9abc-44dd-9352-b50239cb9881" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210919%E6%9A%96%E6%9D%B1%E5%B3%BD%E8%B0%B7-%E8%97%8D%E7%B7%9A.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210919%E6%9A%96%E6%9D%B1%E5%B3%BD%E8%B0%B7-%E8%97%8D%E7%B7%9A.jpg"/></a><figcaption>20210919暖東峽谷-藍線</figcaption></figure><figure id="058b69f2-2d15-4bfe-a9e0-2017b69b5816" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210929%E8%8D%96%E5%AF%AE%E5%9D%91%E6%B9%96%E6%B5%B7%E7%81%A3.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20210929%E8%8D%96%E5%AF%AE%E5%9D%91%E6%B9%96%E6%B5%B7%E7%81%A3.jpg"/></a><figcaption>20210929荖寮坑&amp;湖海灣</figcaption></figure><figure id="76fbcb1d-5e00-4e11-aa4d-77832e39ba43" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211110%E5%8F%B0%E5%8C%97%E8%8F%AF%E5%B1%B1%E6%96%87%E5%89%B5.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211110%E5%8F%B0%E5%8C%97%E8%8F%AF%E5%B1%B1%E6%96%87%E5%89%B5.jpg"/></a><figcaption>20211110台北華山文創</figcaption></figure><figure id="98905a3c-92c1-4b4b-8ced-2232ea682895" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211130%E6%B8%85%E5%A2%83.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211130%E6%B8%85%E5%A2%83.jpg"/></a><figcaption>20211130清境</figcaption></figure><figure id="05c6d10e-832d-4b21-af24-70258ba895dc" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211201%E5%90%88%E6%AD%A1%E5%8C%97%E5%B3%B0-2.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211201%E5%90%88%E6%AD%A1%E5%8C%97%E5%B3%B0-2.jpg"/></a><figcaption>20211201合歡北峰-2</figcaption></figure><figure id="d3dec5a3-361c-4f73-b05b-9792fe7df74b" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211217%E8%A8%B1%E6%A2%93%E6%A1%91%E5%8F%A4%E5%8E%9D.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20211217%E8%A8%B1%E6%A2%93%E6%A1%91%E5%8F%A4%E5%8E%9D.jpg"/></a><figcaption>20211217許梓桑古厝</figcaption></figure><p id="20596aa0-8ced-4cf8-aaf3-e6c528861243" class="">
+</p><p id="7eca3f35-3914-4e7c-8df0-e5fcaf23e3b3" class="">
+</p><p id="522e7929-61cf-446b-aac6-dd3116a78610" class="">
+</p><p id="938a174b-e892-4c0f-bdb5-03a30c761d65" class="">
+</p><figure id="34c850ab-b600-4140-a4fd-cac9b0b92c9a" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220104-06%E6%A2%A8%E5%B1%B1%E7%A6%8F%E5%A3%BD%E5%B1%B1-2.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220104-06%E6%A2%A8%E5%B1%B1%E7%A6%8F%E5%A3%BD%E5%B1%B1-2.jpg"/></a><figcaption>20220104-06梨山&amp;福壽山-2</figcaption></figure><figure id="ea2638c4-830a-4d83-a0d9-fd92aa64a131" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220225%E4%B8%89%E5%B3%BD%E6%B7%B1%E5%9D%91%E8%80%81%E8%A1%97.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220225%E4%B8%89%E5%B3%BD%E6%B7%B1%E5%9D%91%E8%80%81%E8%A1%97.jpg"/></a><figcaption>20220225三峽&amp;深坑老街</figcaption></figure><figure id="ce109fc5-fdaf-47bd-9572-a7a02eff3b07" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220305%E5%AD%9D%E5%AD%90%E5%B1%B1%E3%80%81%E6%85%88%E6%AF%8D%E5%B3%B0%E3%80%81%E6%99%AE%E9%99%80%E5%B1%B1.jpg"><img style="width:1280px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220305%E5%AD%9D%E5%AD%90%E5%B1%B1%E3%80%81%E6%85%88%E6%AF%8D%E5%B3%B0%E3%80%81%E6%99%AE%E9%99%80%E5%B1%B1.jpg"/></a><figcaption>20220305孝子山、慈母峰、普陀山</figcaption></figure><figure id="e179e757-8e39-49f1-b349-5f25121709a7" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220313%E6%9C%9B%E5%8F%A4%E7%80%91%E5%B8%83%E5%B6%BA%E8%85%B3%E5%AF%AE%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"><img style="width:960px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20220313%E6%9C%9B%E5%8F%A4%E7%80%91%E5%B8%83%E5%B6%BA%E8%85%B3%E5%AF%AE%E5%B1%B1%E6%AD%A5%E9%81%93.jpg"/></a><figcaption>20220313望古瀑布&amp;嶺腳寮山步道</figcaption></figure><p id="1a74db70-f95d-4e37-b9e0-42c6ed803a49" class="">
+</p><p id="a0d30e91-5255-423e-9a29-a70b10f633c8" class="">
+</p><p id="2c7f096a-7bd7-4da9-aae4-f1b7674a5a5c" class="">
+</p><p id="6f511d81-94a3-4af1-8609-3b7591d1073e" class="">
+</p><p id="3a8d76e0-03cd-4098-b460-6a159428cbbb" class="">
+</p><p id="dffb2458-9eab-44dd-813e-6b775ff4474b" class="">
+</p><p id="9251ea09-7d77-47dd-8dbd-a9a4b9219911" class="">
+</p><p id="f6ebeec6-49c8-4882-88c3-536a27f82c4a" class="">
+</p><p id="f4b30e95-9c86-491a-af29-8026f3bf27f1" class="">
+</p><p id="e388244b-225f-43c9-99fd-7eb1c8c43408" class="">
+</p><p id="a94d717d-aed7-4215-a865-14ef9152ed7c" class="">
+</p><p id="6a86e783-630a-4daa-a1e6-610c75de148f" class="">
+</p><p id="ab0ba5eb-00cd-4d41-aad4-fb48a079e884" class="">
+</p><p id="bc51de19-d5f9-44ca-808b-965641d93200" class="">
+</p><p id="c8547bfd-f713-44b6-b91d-9ba707a7b57e" class="">
+</p><p id="8a4bbf6a-fa67-43aa-8996-bafe9951ebc9" class="">
+</p><p id="ecdec3e9-b2b1-49f0-a147-c0503a4e0d19" class="">
+</p><p id="d086b5f4-8fa3-4555-8720-c8911390d065" class="">
+</p><p id="fcc04007-6612-4b85-a2d9-ce59b3323b04" class="">
+</p><p id="2ddc8861-faa8-40a1-a9c8-6d1406999079" class="">
+</p><p id="3fe4b24d-351d-41be-a779-17a85cf707cd" class="">
+</p><p id="751d137c-44bc-4f42-8053-36b630fff93a" class="">
+</p><p id="21297aaa-f9ec-4f67-9275-df0f58785c66" class="">
+</p><p id="8b8ec7a9-cdd5-4181-8bb8-a149cd43ef2c" class="">
+</p><p id="a836947e-4934-4eaf-af86-c3998bf8769e" class="">
+</p><p id="5631ef48-61d5-4f00-a6ba-5af5c60e643d" class="">
+</p><p id="9d496eed-5107-4eed-bbf3-c89c0ab6f2a8" class="">
+</p><p id="f46c5a2c-d332-455e-aceb-5625561a9d7f" class="">
+</p><p id="101b2c63-8e68-4d71-81d3-4dfbd094dd87" class="">
+</p><p id="4b8c2b43-385d-4281-b60d-6a0acedf9989" class="">
+</p><p id="32961215-a6f4-4450-8c82-9681017b72ab" class="">
+</p></div></div><p id="b37933f8-130f-4170-82d4-348226fc9dbf" class="">
+</p><p id="3fd546e2-9686-4175-92bc-1ef5033d176e" class="">
+</p><p id="f9da5fa3-23ed-482a-af69-d3d82b584b8d" class="">
+</p><p id="71cc9fd7-794b-4c5b-8957-9d937b1b0f48" class="">
+</p><p id="f1149a5a-dc3b-4f0c-901f-b58181451647" class="">
+</p><p id="ff2980e2-0f7c-4499-826d-ac1a994e50e1" class="">
+</p><p id="c31d994f-02d3-404f-8796-e9a56ceedd0b" class="">
+</p><p id="8427cf2d-1cf1-4a2b-bf7d-6c5b4762b8ff" class="">
+</p><p id="da14d459-d7cb-4965-aaa2-c4d1cf5c31cc" class="">
+</p><p id="ab7b059d-d304-4237-b6a6-6773516d865c" class="">
+</p><p id="82eed50c-e96f-444e-90e8-4d7ecc9b46b8" class="">
+</p><p id="0e2d73f8-9cf1-4efe-a746-e5eb3c1e5e86" class="">
+</p><p id="8442ef1f-d2f7-4231-9c44-804c3a6dfe89" class="">
+</p><p id="55bae370-9408-427e-8cd1-65cf567d4694" class="">
+</p><p id="5d0a6829-4872-46e3-9dd1-832405259fb6" class="">
+</p><p id="147ceffe-8957-47f4-9a34-7c8035775406" class="">
+</p><p id="a358aa56-b062-46e2-b8fb-e22dcfb30213" class="">
+</p><p id="60fb1e32-1982-4194-8d24-9700e2f7e24e" class="">
+</p><p id="d9c84845-b1f4-43eb-b1b8-b9e1058b9281" class="">
+</p><p id="2f037aa1-a679-4668-a31f-af88e753fb46" class="">
+</p><p id="505bc034-05d1-4b70-88d6-8255cc2a7e18" class="">
+</p><p id="9fd1efb7-1e00-4292-81a5-962220610f55" class="">
+</p><figure id="a2127ff9-a127-456e-bfde-fcd59daeaced" class="image"><a href="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200712-14%E6%A1%83%E5%9C%92%E4%B8%89%E5%9D%91%E7%B4%85%E6%A9%8B.jpg"><img style="width:1478px" src="%E6%88%91%E7%9A%84%E6%AD%A5%E9%81%93%E8%A1%8C%E6%97%85II%20(%2011847/20200712-14%E6%A1%83%E5%9C%92%E4%B8%89%E5%9D%91%E7%B4%85%E6%A9%8B.jpg"/></a></figure><p id="8e557b67-be54-4fa9-9ebc-c46a66e02a85" class="">
+</p><p id="9d818d1c-6063-48c3-b2e4-5abd243dcfba" class="">
+</p><p id="b64959b6-37f6-4ba3-9964-3a441bd8e256" class="">
+</p><p id="994583d5-0621-47aa-bc6b-c53f4a058ac0" class="">
+</p><p id="8e97d0d5-fbf8-4015-98f7-4fcc146d5287" class="">
+</p><p id="d33a4dfa-259d-4dda-bd70-3fb36d27545b" class="">
+</p><p id="361d9579-2fc8-4780-b41c-d30da8b6a7b5" class="">
+</p><p id="a9e55d20-d4ce-457b-bdb0-3c5776a1607f" class="">2020.01-12</p></div></article></body></html>
